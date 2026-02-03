@@ -8,7 +8,7 @@ from sklearn.linear_model import LogisticRegression
 from sklearn.model_selection import train_test_split
 
 # ---------------- CONFIG ----------------
-GROQ_API_KEY = "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"  # or os.getenv("GROQ_API_KEY")
+GROQ_API_KEY = os.getenv("GROQ_API_KEY")
 GROQ_MODEL = "openai/gpt-oss-120b"
 GROQ_ENDPOINT = "https://api.groq.com/openai/v1/chat/completions"
 MODEL_PATH = "sepsis_model.pkl"
@@ -192,3 +192,4 @@ with tab2:
 
         with st.chat_message("assistant"):
             st.markdown(reply)
+
